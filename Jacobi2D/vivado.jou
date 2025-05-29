@@ -1,0 +1,810 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sat Dec 28 23:24:24 2024
+# Process ID: 2484
+# Current directory: /home/pedro.rosso/stencil/stencil/Jacobi2D
+# Command line: vivado
+# Log file: /home/pedro.rosso/stencil/stencil/Jacobi2D/vivado.log
+# Journal file: /home/pedro.rosso/stencil/stencil/Jacobi2D/vivado.jou
+# Running On: fpga-a3, OS: Linux, CPU Frequency: 1000.246 MHz, CPU Physical cores: 20, Host memory: 134833 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.xpr
+update_compile_order -fileset sources_1
+set_property USER_LOCKED 1 [get_ips FPMult]
+export_ip_user_files -of_objects  [get_files /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/FPMult/FPMult.xci] -no_script -reset -force -quiet
+remove_files  -fileset FPMult /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/FPMult/FPMult.xci
+file delete -force /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/FPMult.xcix
+create_ip -name floating_point -vendor xilinx.com -library ip -version 7.1 -module_name FPMul
+set_property -dict [list CONFIG.Component_Name {FPMul} CONFIG.Operation_Type {Multiply} CONFIG.C_Mult_Usage {Max_Usage} CONFIG.Axi_Optimize_Goal {Performance} CONFIG.Maximum_Latency {false} CONFIG.C_Latency {5} CONFIG.Has_ARESETn {true} CONFIG.Has_A_TLAST {true} CONFIG.A_Precision_Type {Single} CONFIG.C_A_Exponent_Width {8} CONFIG.C_A_Fraction_Width {24} CONFIG.Result_Precision_Type {Single} CONFIG.C_Result_Exponent_Width {8} CONFIG.C_Result_Fraction_Width {24} CONFIG.C_Rate {1} CONFIG.RESULT_TLAST_Behv {Pass_A_TLAST}] [get_ips FPMul]
+generate_target {instantiation_template} [get_files /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/FPMul/FPMul.xci]
+update_compile_order -fileset sources_1
+generate_target all [get_files  /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/FPMul/FPMul.xci]
+catch { config_ip_cache -export [get_ips -all FPMul] }
+export_ip_user_files -of_objects [get_files /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/FPMul/FPMul.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/FPMul/FPMul.xci]
+export_simulation -of_objects [get_files /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/FPMul/FPMul.xci] -directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.ip_user_files/sim_scripts -ip_user_files_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.ip_user_files -ipstatic_source_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/modelsim} {questa=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/questa} {xcelium=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/xcelium} {vcs=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/vcs} {riviera=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+convert_ips [get_files  /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/BR1024FIFO16/BR1024FIFO16.xci]
+export_ip_user_files -of_objects  [get_files  /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/BR1024FIFO16/BR1024FIFO16.xci] -sync -lib_map_path [list {modelsim=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/modelsim} {questa=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/questa} {xcelium=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/xcelium} {vcs=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/vcs} {riviera=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/riviera}] -force -quiet
+convert_ips [get_files  /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/FPSum/FPSum.xci]
+export_ip_user_files -of_objects  [get_files  /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/FPSum/FPSum.xci] -sync -lib_map_path [list {modelsim=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/modelsim} {questa=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/questa} {xcelium=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/xcelium} {vcs=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/vcs} {riviera=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/riviera}] -force -quiet
+convert_ips [get_files  /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/SR32Lat7/SR32Lat7.xci]
+export_ip_user_files -of_objects  [get_files  /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/SR32Lat7/SR32Lat7.xci] -sync -lib_map_path [list {modelsim=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/modelsim} {questa=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/questa} {xcelium=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/xcelium} {vcs=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/vcs} {riviera=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/riviera}] -force -quiet
+convert_ips [get_files  /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/SR32Lat15/SR32Lat15.xci]
+export_ip_user_files -of_objects  [get_files  /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/SR32Lat15/SR32Lat15.xci] -sync -lib_map_path [list {modelsim=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/modelsim} {questa=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/questa} {xcelium=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/xcelium} {vcs=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/vcs} {riviera=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/riviera}] -force -quiet
+convert_ips [get_files  /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/FPMul/FPMul.xci]
+export_ip_user_files -of_objects  [get_files  /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/FPMul/FPMul.xci] -sync -lib_map_path [list {modelsim=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/modelsim} {questa=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/questa} {xcelium=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/xcelium} {vcs=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/vcs} {riviera=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/riviera}] -force -quiet
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 20
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+wait_on_run synth_1
+ipx::package_project -root_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -vendor user.org -library user -taxonomy /UserIP -archive_source_project true
+set_property ipi_drc {ignore_freq_hz false} [ipx::current_core]
+set_property sdx_kernel true [ipx::current_core]
+set_property sdx_kernel_type rtl [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_hs} [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_none} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+ipx::add_bus_parameter FREQ_TOLERANCE_HZ [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]
+set_property value -1 [ipx::get_bus_parameters FREQ_TOLERANCE_HZ -of_objects [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+set_property  ip_repo_paths  /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 [current_project]
+update_ip_catalog
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+wait_on_run synth_1
+ipx::package_project -root_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -vendor user.org -library user -taxonomy /UserIP -force -archive_source_project true
+set_property ipi_drc {ignore_freq_hz false} [ipx::current_core]
+set_property sdx_kernel true [ipx::current_core]
+set_property sdx_kernel_type rtl [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_hs} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_none} [ipx::current_core]
+ipx::add_bus_parameter FREQ_TOLERANCE_HZ [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]
+set_property value -1 [ipx::get_bus_parameters FREQ_TOLERANCE_HZ -of_objects [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+set_property core_revision 3 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_hs} [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_none} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz false} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 4 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+ipx::unload_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/component.xml
+ipx::package_project -root_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -vendor user.org -library user -taxonomy /UserIP -force -archive_source_project true
+set_property ipi_drc {ignore_freq_hz false} [ipx::current_core]
+set_property sdx_kernel true [ipx::current_core]
+set_property sdx_kernel_type rtl [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_hs} [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_none} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz false} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+ipx::add_bus_parameter FREQ_TOLERANCE_HZ [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]
+set_property value -1 [ipx::get_bus_parameters FREQ_TOLERANCE_HZ -of_objects [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+set_property core_revision 3 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+report_ip_status -name ip_status 
+ipx::package_project -root_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -vendor user.org -library user -taxonomy /UserIP -force -archive_source_project true
+set_property ipi_drc {ignore_freq_hz false} [ipx::current_core]
+set_property sdx_kernel true [ipx::current_core]
+set_property sdx_kernel_type rtl [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_hs} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz false} [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_none} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+ipx::add_bus_parameter FREQ_TOLERANCE_HZ [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]
+set_property value -1 [ipx::get_bus_parameters FREQ_TOLERANCE_HZ -of_objects [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+set_property -dict [list CONFIG.Write_Acknowledge_Flag {true} CONFIG.Data_Count {true}] [get_ips BR1024FIFO16]
+generate_target all [get_files  /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/BR1024FIFO16/BR1024FIFO16.xci]
+catch { config_ip_cache -export [get_ips -all BR1024FIFO16] }
+export_ip_user_files -of_objects [get_files /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/BR1024FIFO16/BR1024FIFO16.xci] -no_script -sync -force -quiet
+reset_run BR1024FIFO16_synth_1
+launch_runs BR1024FIFO16_synth_1 -jobs 20
+wait_on_run BR1024FIFO16_synth_1
+export_simulation -of_objects [get_files /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/BR1024FIFO16/BR1024FIFO16.xci] -directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.ip_user_files/sim_scripts -ip_user_files_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.ip_user_files -ipstatic_source_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/modelsim} {questa=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/questa} {xcelium=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/xcelium} {vcs=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/vcs} {riviera=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+wait_on_run synth_1
+ipx::package_project -root_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -vendor user.org -library user -taxonomy /UserIP -force -archive_source_project true
+set_property ipi_drc {ignore_freq_hz false} [ipx::current_core]
+set_property sdx_kernel true [ipx::current_core]
+set_property sdx_kernel_type rtl [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_hs} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_none} [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+ipx::add_bus_parameter FREQ_TOLERANCE_HZ [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]
+set_property value -1 [ipx::get_bus_parameters FREQ_TOLERANCE_HZ -of_objects [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+ipx::package_project -root_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -vendor user.org -library user -taxonomy /UserIP -force -archive_source_project true
+ipx::package_project -root_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -vendor user.org -library user -taxonomy /UserIP -archive_source_project true
+set_property ipi_drc {ignore_freq_hz false} [ipx::current_core]
+set_property sdx_kernel true [ipx::current_core]
+set_property sdx_kernel_type rtl [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_hs} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_none} [ipx::current_core]
+ipx::add_bus_parameter FREQ_TOLERANCE_HZ [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]
+set_property value -1 [ipx::get_bus_parameters FREQ_TOLERANCE_HZ -of_objects [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+ipx::package_project -root_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -vendor user.org -library user -taxonomy /UserIP -force -archive_source_project true
+set_property ipi_drc {ignore_freq_hz false} [ipx::current_core]
+set_property sdx_kernel true [ipx::current_core]
+set_property sdx_kernel_type rtl [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_hs} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_none} [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+ipx::add_bus_parameter FREQ_TOLERANCE_HZ [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]
+set_property value -1 [ipx::get_bus_parameters FREQ_TOLERANCE_HZ -of_objects [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+set_property -dict [list CONFIG.Input_Depth {16} CONFIG.Output_Depth {16} CONFIG.Use_Embedded_Registers {true} CONFIG.Data_Count_Width {5} CONFIG.Write_Data_Count_Width {5} CONFIG.Read_Data_Count_Width {5} CONFIG.Programmable_Full_Type {No_Programmable_Full_Threshold} CONFIG.Full_Threshold_Assert_Value {15} CONFIG.Full_Threshold_Negate_Value {14} CONFIG.Output_Register_Type {Embedded_Reg}] [get_ips BR1024FIFO16]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::package_project -root_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -vendor user.org -library user -taxonomy /UserIP -force -archive_source_project true
+set_property ipi_drc {ignore_freq_hz false} [ipx::current_core]
+set_property sdx_kernel true [ipx::current_core]
+set_property sdx_kernel_type rtl [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_hs} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_none} [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+ipx::add_bus_parameter FREQ_TOLERANCE_HZ [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]
+set_property value -1 [ipx::get_bus_parameters FREQ_TOLERANCE_HZ -of_objects [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+ipx::package_project -root_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -vendor user.org -library user -taxonomy /UserIP -force -archive_source_project true
+set_property ipi_drc {ignore_freq_hz false} [ipx::current_core]
+set_property sdx_kernel true [ipx::current_core]
+set_property sdx_kernel_type rtl [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_hs} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_none} [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+ipx::add_bus_parameter FREQ_TOLERANCE_HZ [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]
+set_property value -1 [ipx::get_bus_parameters FREQ_TOLERANCE_HZ -of_objects [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+ipx::package_project -root_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -vendor user.org -library user -taxonomy /UserIP -force -archive_source_project true
+set_property ipi_drc {ignore_freq_hz false} [ipx::current_core]
+set_property sdx_kernel true [ipx::current_core]
+set_property sdx_kernel_type rtl [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_hs} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_none} [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+ipx::add_bus_parameter FREQ_TOLERANCE_HZ [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]
+set_property value -1 [ipx::get_bus_parameters FREQ_TOLERANCE_HZ -of_objects [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+set_property -dict [list CONFIG.Almost_Full_Flag {false} CONFIG.Almost_Empty_Flag {true} CONFIG.Programmable_Full_Type {Single_Programmable_Full_Threshold_Constant} CONFIG.Programmable_Empty_Type {No_Programmable_Empty_Threshold}] [get_ips BR1024FIFO16]
+generate_target all [get_files  /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/BR1024FIFO16/BR1024FIFO16.xci]
+catch { config_ip_cache -export [get_ips -all BR1024FIFO16] }
+export_ip_user_files -of_objects [get_files /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/BR1024FIFO16/BR1024FIFO16.xci] -no_script -sync -force -quiet
+reset_run BR1024FIFO16_synth_1
+launch_runs BR1024FIFO16_synth_1 -jobs 20
+wait_on_run BR1024FIFO16_synth_1
+export_simulation -of_objects [get_files /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/BR1024FIFO16/BR1024FIFO16.xci] -directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.ip_user_files/sim_scripts -ip_user_files_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.ip_user_files -ipstatic_source_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/modelsim} {questa=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/questa} {xcelium=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/xcelium} {vcs=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/vcs} {riviera=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+ipx::package_project -root_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -vendor user.org -library user -taxonomy /UserIP -force -archive_source_project true
+set_property ipi_drc {ignore_freq_hz false} [ipx::current_core]
+set_property sdx_kernel true [ipx::current_core]
+set_property sdx_kernel_type rtl [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_hs} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_none} [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+ipx::add_bus_parameter FREQ_TOLERANCE_HZ [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]
+set_property value -1 [ipx::get_bus_parameters FREQ_TOLERANCE_HZ -of_objects [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+ipx::package_project -root_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -vendor user.org -library user -taxonomy /UserIP -force -archive_source_project true
+set_property ipi_drc {ignore_freq_hz false} [ipx::current_core]
+set_property sdx_kernel true [ipx::current_core]
+set_property sdx_kernel_type rtl [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_hs} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_none} [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+ipx::add_bus_parameter FREQ_TOLERANCE_HZ [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]
+set_property value -1 [ipx::get_bus_parameters FREQ_TOLERANCE_HZ -of_objects [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+ipx::package_project -root_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -vendor user.org -library user -taxonomy /UserIP -force -archive_source_project true
+set_property ipi_drc {ignore_freq_hz false} [ipx::current_core]
+set_property sdx_kernel true [ipx::current_core]
+set_property sdx_kernel_type rtl [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_hs} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_none} [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+ipx::add_bus_parameter FREQ_TOLERANCE_HZ [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]
+set_property value -1 [ipx::get_bus_parameters FREQ_TOLERANCE_HZ -of_objects [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+set_property core_revision 3 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+ipx::package_project -root_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -vendor user.org -library user -taxonomy /UserIP -force -archive_source_project true
+set_property ipi_drc {ignore_freq_hz false} [ipx::current_core]
+set_property sdx_kernel true [ipx::current_core]
+set_property sdx_kernel_type rtl [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_hs} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_none} [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+ipx::add_bus_parameter FREQ_TOLERANCE_HZ [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]
+set_property value -1 [ipx::get_bus_parameters FREQ_TOLERANCE_HZ -of_objects [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+ipx::package_project -root_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -vendor user.org -library user -taxonomy /UserIP -force -archive_source_project true
+set_property ipi_drc {ignore_freq_hz false} [ipx::current_core]
+set_property sdx_kernel true [ipx::current_core]
+set_property sdx_kernel_type rtl [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_hs} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_none} [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+ipx::add_bus_parameter FREQ_TOLERANCE_HZ [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]
+set_property value -1 [ipx::get_bus_parameters FREQ_TOLERANCE_HZ -of_objects [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+set_property -dict [list CONFIG.Performance_Options {First_Word_Fall_Through} CONFIG.Output_Register_Type {Fabric_Reg}] [get_ips BR1024FIFO16]
+generate_target all [get_files  /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/BR1024FIFO16/BR1024FIFO16.xci]
+catch { config_ip_cache -export [get_ips -all BR1024FIFO16] }
+export_ip_user_files -of_objects [get_files /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/BR1024FIFO16/BR1024FIFO16.xci] -no_script -sync -force -quiet
+reset_run BR1024FIFO16_synth_1
+launch_runs BR1024FIFO16_synth_1 -jobs 20
+wait_on_run BR1024FIFO16_synth_1
+export_simulation -of_objects [get_files /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/BR1024FIFO16/BR1024FIFO16.xci] -directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.ip_user_files/sim_scripts -ip_user_files_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.ip_user_files -ipstatic_source_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/modelsim} {questa=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/questa} {xcelium=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/xcelium} {vcs=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/vcs} {riviera=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::unload_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/component.xml
+ipx::package_project -root_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -vendor user.org -library user -taxonomy /UserIP -force -archive_source_project true
+set_property ipi_drc {ignore_freq_hz false} [ipx::current_core]
+set_property sdx_kernel true [ipx::current_core]
+set_property sdx_kernel_type rtl [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_hs} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_none} [ipx::current_core]
+ipx::add_bus_parameter FREQ_TOLERANCE_HZ [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]
+set_property value -1 [ipx::get_bus_parameters FREQ_TOLERANCE_HZ -of_objects [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+ipx::package_project -root_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -vendor user.org -library user -taxonomy /UserIP -force -archive_source_project true
+ipx::merge_project_changes files [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+set_property sdx_kernel true [ipx::current_core]
+set_property sdx_kernel_type rtl [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_hs} [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_none} [ipx::current_core]
+ipx::add_bus_parameter FREQ_TOLERANCE_HZ [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]
+set_property value -1 [ipx::get_bus_parameters FREQ_TOLERANCE_HZ -of_objects [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+ipx::package_project -root_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -vendor user.org -library user -taxonomy /UserIP -force -archive_source_project true
+set_property ipi_drc {ignore_freq_hz false} [ipx::current_core]
+set_property sdx_kernel true [ipx::current_core]
+set_property sdx_kernel_type rtl [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_hs} [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_none} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+ipx::add_bus_parameter FREQ_TOLERANCE_HZ [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]
+set_property value -1 [ipx::get_bus_parameters FREQ_TOLERANCE_HZ -of_objects [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+set_property core_revision 3 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+ipx::package_project -root_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -vendor user.org -library user -taxonomy /UserIP -force -archive_source_project true
+set_property ipi_drc {ignore_freq_hz false} [ipx::current_core]
+set_property sdx_kernel true [ipx::current_core]
+set_property sdx_kernel_type rtl [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_hs} [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_none} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::add_bus_parameter FREQ_TOLERANCE_HZ [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]
+set_property value -1 [ipx::get_bus_parameters FREQ_TOLERANCE_HZ -of_objects [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+set_property -dict [list CONFIG.Fifo_Implementation {Common_Clock_Builtin_FIFO} CONFIG.Input_Depth {512} CONFIG.Output_Depth {512} CONFIG.Almost_Empty_Flag {false} CONFIG.Use_Extra_Logic {false} CONFIG.Data_Count {false} CONFIG.Data_Count_Width {9} CONFIG.Write_Data_Count_Width {9} CONFIG.Read_Data_Count_Width {9} CONFIG.Full_Threshold_Assert_Value {511} CONFIG.Full_Threshold_Negate_Value {510} CONFIG.Output_Register_Type {Embedded_Reg}] [get_ips BR1024FIFO16]
+generate_target all [get_files  /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/BR1024FIFO16/BR1024FIFO16.xci]
+catch { config_ip_cache -export [get_ips -all BR1024FIFO16] }
+export_ip_user_files -of_objects [get_files /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/BR1024FIFO16/BR1024FIFO16.xci] -no_script -sync -force -quiet
+reset_run BR1024FIFO16_synth_1
+launch_runs BR1024FIFO16_synth_1 -jobs 20
+wait_on_run BR1024FIFO16_synth_1
+export_simulation -of_objects [get_files /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/BR1024FIFO16/BR1024FIFO16.xci] -directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.ip_user_files/sim_scripts -ip_user_files_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.ip_user_files -ipstatic_source_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/modelsim} {questa=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/questa} {xcelium=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/xcelium} {vcs=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/vcs} {riviera=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+set_property -dict [list CONFIG.Fifo_Implementation {Common_Clock_Block_RAM} CONFIG.Input_Depth {16} CONFIG.Output_Depth {16} CONFIG.Use_Extra_Logic {true} CONFIG.Data_Count {true} CONFIG.Data_Count_Width {5} CONFIG.Write_Data_Count_Width {5} CONFIG.Read_Data_Count_Width {5} CONFIG.Full_Threshold_Assert_Value {15} CONFIG.Full_Threshold_Negate_Value {14}] [get_ips BR1024FIFO16]
+generate_target all [get_files  /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/BR1024FIFO16/BR1024FIFO16.xci]
+catch { config_ip_cache -export [get_ips -all BR1024FIFO16] }
+export_ip_user_files -of_objects [get_files /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/BR1024FIFO16/BR1024FIFO16.xci] -no_script -sync -force -quiet
+reset_run BR1024FIFO16_synth_1
+launch_runs BR1024FIFO16_synth_1 -jobs 20
+wait_on_run BR1024FIFO16_synth_1
+export_simulation -of_objects [get_files /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/BR1024FIFO16/BR1024FIFO16.xci] -directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.ip_user_files/sim_scripts -ip_user_files_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.ip_user_files -ipstatic_source_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/modelsim} {questa=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/questa} {xcelium=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/xcelium} {vcs=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/vcs} {riviera=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+wait_on_run synth_1
+set_property -dict [list CONFIG.Almost_Empty_Flag {true}] [get_ips BR1024FIFO16]
+generate_target all [get_files  /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/BR1024FIFO16/BR1024FIFO16.xci]
+catch { config_ip_cache -export [get_ips -all BR1024FIFO16] }
+catch { [ delete_ip_run [get_ips -all BR1024FIFO16] ] }
+export_ip_user_files -of_objects [get_files /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/BR1024FIFO16/BR1024FIFO16.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/BR1024FIFO16/BR1024FIFO16.xci]
+export_simulation -of_objects [get_files /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/ip/BR1024FIFO16/BR1024FIFO16.xci] -directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.ip_user_files/sim_scripts -ip_user_files_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.ip_user_files -ipstatic_source_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/modelsim} {questa=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/questa} {xcelium=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/xcelium} {vcs=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/vcs} {riviera=/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+wait_on_run synth_1
+ipx::package_project -root_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -vendor user.org -library user -taxonomy /UserIP -force -archive_source_project true
+set_property ipi_drc {ignore_freq_hz false} [ipx::current_core]
+set_property sdx_kernel true [ipx::current_core]
+set_property sdx_kernel_type rtl [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_hs} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_none} [ipx::current_core]
+ipx::add_bus_parameter FREQ_TOLERANCE_HZ [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]
+set_property value -1 [ipx::get_bus_parameters FREQ_TOLERANCE_HZ -of_objects [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+wait_on_run synth_1
+ipx::package_project -root_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -vendor user.org -library user -taxonomy /UserIP -force -archive_source_project true
+set_property ipi_drc {ignore_freq_hz false} [ipx::current_core]
+set_property sdx_kernel true [ipx::current_core]
+set_property sdx_kernel_type rtl [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_hs} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_none} [ipx::current_core]
+ipx::add_bus_parameter FREQ_TOLERANCE_HZ [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]
+set_property value -1 [ipx::get_bus_parameters FREQ_TOLERANCE_HZ -of_objects [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+ipx::package_project -root_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -vendor user.org -library user -taxonomy /UserIP -force -archive_source_project true
+set_property ipi_drc {ignore_freq_hz false} [ipx::current_core]
+set_property sdx_kernel true [ipx::current_core]
+set_property sdx_kernel_type rtl [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_hs} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_none} [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::add_bus_parameter FREQ_TOLERANCE_HZ [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]
+set_property value -1 [ipx::get_bus_parameters FREQ_TOLERANCE_HZ -of_objects [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+wait_on_run synth_1
+ipx::package_project -root_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -vendor user.org -library user -taxonomy /UserIP -force -archive_source_project true
+set_property ipi_drc {ignore_freq_hz false} [ipx::current_core]
+set_property sdx_kernel true [ipx::current_core]
+set_property sdx_kernel_type rtl [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_hs} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_none} [ipx::current_core]
+ipx::add_bus_parameter FREQ_TOLERANCE_HZ [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]
+set_property value -1 [ipx::get_bus_parameters FREQ_TOLERANCE_HZ -of_objects [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+set_property core_revision 3 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+ipx::package_project -root_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -vendor user.org -library user -taxonomy /UserIP -force -archive_source_project true
+set_property ipi_drc {ignore_freq_hz false} [ipx::current_core]
+set_property sdx_kernel true [ipx::current_core]
+set_property sdx_kernel_type rtl [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_hs} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_none} [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+ipx::add_bus_parameter FREQ_TOLERANCE_HZ [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]
+set_property value -1 [ipx::get_bus_parameters FREQ_TOLERANCE_HZ -of_objects [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+reset_run synth_1
+launch_runs synth_1 -jobs 20
+wait_on_run synth_1
+ipx::package_project -root_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -vendor user.org -library user -taxonomy /UserIP -force -archive_source_project true
+set_property ipi_drc {ignore_freq_hz false} [ipx::current_core]
+set_property sdx_kernel true [ipx::current_core]
+set_property sdx_kernel_type rtl [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_hs} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_none} [ipx::current_core]
+ipx::add_bus_parameter FREQ_TOLERANCE_HZ [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]
+set_property value -1 [ipx::get_bus_parameters FREQ_TOLERANCE_HZ -of_objects [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+ipx::unload_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/component.xml
+ipx::package_project -root_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -vendor user.org -library user -taxonomy /UserIP -force -archive_source_project true
+set_property ipi_drc {ignore_freq_hz false} [ipx::current_core]
+set_property sdx_kernel true [ipx::current_core]
+set_property sdx_kernel_type rtl [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_hs} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_none} [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+ipx::add_bus_parameter FREQ_TOLERANCE_HZ [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]
+set_property value -1 [ipx::get_bus_parameters FREQ_TOLERANCE_HZ -of_objects [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+open_run synth_1 -name synth_1
+report_utilization -name utilization_1
+close_design
+ipx::unload_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/component.xml
+ipx::package_project -root_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -vendor user.org -library user -taxonomy /UserIP -force -archive_source_project true
+set_property ipi_drc {ignore_freq_hz false} [ipx::current_core]
+set_property sdx_kernel true [ipx::current_core]
+set_property sdx_kernel_type rtl [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_hs} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_none} [ipx::current_core]
+ipx::add_bus_parameter FREQ_TOLERANCE_HZ [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]
+set_property value -1 [ipx::get_bus_parameters FREQ_TOLERANCE_HZ -of_objects [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+ipx::package_project -root_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -vendor user.org -library user -taxonomy /UserIP -force -archive_source_project true
+set_property ipi_drc {ignore_freq_hz false} [ipx::current_core]
+set_property sdx_kernel true [ipx::current_core]
+set_property sdx_kernel_type rtl [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_hs} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_none} [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+ipx::add_bus_parameter FREQ_TOLERANCE_HZ [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]
+set_property value -1 [ipx::get_bus_parameters FREQ_TOLERANCE_HZ -of_objects [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+ipx::package_project -root_dir /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -vendor user.org -library user -taxonomy /UserIP -force -archive_source_project true
+ipx::merge_project_changes files [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz false} [ipx::current_core]
+set_property sdx_kernel true [ipx::current_core]
+set_property sdx_kernel_type rtl [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_hs} [ipx::current_core]
+set_property ipi_drc {ignore_freq_hz true} [ipx::current_core]
+set_property vitis_drc {ctrl_protocol ap_ctrl_none} [ipx::current_core]
+ipx::add_bus_parameter FREQ_TOLERANCE_HZ [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]
+set_property value -1 [ipx::get_bus_parameters FREQ_TOLERANCE_HZ -of_objects [ipx::get_bus_interfaces ACLK -of_objects [ipx::current_core]]]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]
+set_property core_revision 3 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity -kernel -xrt [ipx::current_core]
+ipx::save_core [ipx::current_core]
+# Removing existing XO file: '/home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo'
+package_xo  -xo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/xo/Jacobi2D.xo -kernel_name Jacobi2D -ip_directory /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1 -ctrl_protocol ap_ctrl_none
+update_ip_catalog -rebuild -repo_path /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1
+ipx::check_integrity -quiet -kernel -xrt [ipx::current_core]
+ipx::archive_core /home/pedro.rosso/stencil/stencil/Jacobi2D/Jacobi2D.srcs/sources_1/user.org_user_Jacobi2D_1.0.zip [ipx::current_core]

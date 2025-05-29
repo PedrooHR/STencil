@@ -1,0 +1,2 @@
+BR1024FIFO512B.v,verilog,xil_defaultlib,../../../../Heat3D.gen/sources_1/ip/BR1024FIFO512B/sim/BR1024FIFO512B.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

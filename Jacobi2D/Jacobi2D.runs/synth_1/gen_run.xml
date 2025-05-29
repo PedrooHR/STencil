@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xcu55c-fsvh2892-2L-e" LaunchTime="1742779581" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/Jacobi2D.dcp">
+  <File Type="VDS-TIMINGSUMMARY" Name="Jacobi2D_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="Jacobi2D.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="Jacobi2D_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="Jacobi2D_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="Jacobi2D_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="Jacobi2D.vds"/>
+  <File Type="REPORTS-TCL" Name="Jacobi2D_reports.tcl"/>
+  <File Type="VDS-TIMING-PB" Name="Jacobi2D_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="Jacobi2D.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/ip/FPMul/FPMul.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/ip/FPMul/FPMul.xci"/>
+        <Attr Name="ImportTime" Val="1735439381"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/SR32Lat15/SR32Lat15.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/ip/SR32Lat15/SR32Lat15.xci"/>
+        <Attr Name="ImportTime" Val="1735256679"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/2D/ALU.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../StencilSRC/Jacobi/2D/ALU.v"/>
+        <Attr Name="ImportTime" Val="1735245002"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/2D/BlockALU.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../StencilSRC/Jacobi/2D/BlockALU.v"/>
+        <Attr Name="ImportTime" Val="1735245002"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/2D/Collector.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../StencilSRC/Jacobi/2D/Collector.v"/>
+        <Attr Name="ImportTime" Val="1735245003"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/2D/Queue.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../StencilSRC/Jacobi/2D/Queue.v"/>
+        <Attr Name="ImportTime" Val="1735245003"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/2D/Sink.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../StencilSRC/Jacobi/2D/Sink.v"/>
+        <Attr Name="ImportTime" Val="1735245003"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/2D/Jacobi2D.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../StencilSRC/Jacobi/2D/Jacobi2D.v"/>
+        <Attr Name="ImportTime" Val="1735245003"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/component.xml">
+      <FileInfo SFType="IPXACT"/>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Jacobi2D"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/Jacobi2D.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="SR32Lat7"/>
+  <BlockFileSet Type="BlockSrcs" Name="BR1024FIFO16"/>
+  <BlockFileSet Type="BlockSrcs" Name="FPSum"/>
+</GenRun>

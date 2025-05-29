@@ -1,0 +1,1063 @@
+
+*** Running vivado
+    with args -log Heat3D.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Heat3D.tcl
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source Heat3D.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.srcs/sources_1'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental /home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.srcs/utils_1/imports/synth_1/Heat3D.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.srcs/utils_1/imports/synth_1/Heat3D.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top Heat3D -part xcu55c-fsvh2892-2L-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcu55c'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcu55c'
+INFO: [Device 21-403] Loading part xcu55c-fsvh2892-2L-e
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 36338
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3654.184 ; gain = 338.762 ; free physical = 36134 ; free virtual = 81855
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Heat3D' [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.srcs/sources_1/imports/3D/Heat3D.v:4]
+INFO: [Synth 8-6157] synthesizing module 'Collector' [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.srcs/sources_1/imports/3D/Collector.v:5]
+	Parameter SHIFTWIDTH bound to: 16'b0000000000010000 
+INFO: [Synth 8-6155] done synthesizing module 'Collector' (0#1) [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.srcs/sources_1/imports/3D/Collector.v:5]
+INFO: [Synth 8-6157] synthesizing module 'Queue' [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.srcs/sources_1/imports/3D/Queue.v:5]
+	Parameter SHIFTWIDTH bound to: 16'b0000000000010000 
+	Parameter COLUMNS bound to: 16'b0000000000000011 
+	Parameter ROWS bound to: 16'b0000000001111111 
+	Parameter SQUARE bound to: 16'b0000000111111111 
+INFO: [Synth 8-6157] synthesizing module 'BR1024FIFO512' [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.runs/synth_1/.Xil/Vivado-36123-fpga-a3/realtime/BR1024FIFO512_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'BR1024FIFO512' (0#1) [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.runs/synth_1/.Xil/Vivado-36123-fpga-a3/realtime/BR1024FIFO512_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'SR32Lat3' [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.runs/synth_1/.Xil/Vivado-36123-fpga-a3/realtime/SR32Lat3_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'SR32Lat3' (0#1) [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.runs/synth_1/.Xil/Vivado-36123-fpga-a3/realtime/SR32Lat3_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'Queue' (0#1) [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.srcs/sources_1/imports/3D/Queue.v:5]
+INFO: [Synth 8-6157] synthesizing module 'Sink' [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.srcs/sources_1/imports/3D/Sink.v:5]
+	Parameter SHIFTWIDTH bound to: 16'b0000000000010000 
+INFO: [Synth 8-6155] done synthesizing module 'Sink' (0#1) [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.srcs/sources_1/imports/3D/Sink.v:5]
+INFO: [Synth 8-6157] synthesizing module 'BlockALU' [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.srcs/sources_1/imports/3D/BlockALU.v:4]
+	Parameter SHIFTWIDTH bound to: 16'b0000000000010000 
+	Parameter K bound to: 1040187392 - type: integer 
+	Parameter Z bound to: 1040187392 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ALU' [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.srcs/sources_1/imports/3D/ALU.v:8]
+	Parameter K bound to: 1040187392 - type: integer 
+	Parameter Z bound to: 1040187392 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'FPSum' [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.runs/synth_1/.Xil/Vivado-36123-fpga-a3/realtime/FPSum_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'FPSum' (0#1) [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.runs/synth_1/.Xil/Vivado-36123-fpga-a3/realtime/FPSum_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'SR32Lat7' [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.runs/synth_1/.Xil/Vivado-36123-fpga-a3/realtime/SR32Lat7_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'SR32Lat7' (0#1) [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.runs/synth_1/.Xil/Vivado-36123-fpga-a3/realtime/SR32Lat7_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'FPMul' [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.runs/synth_1/.Xil/Vivado-36123-fpga-a3/realtime/FPMul_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'FPMul' (0#1) [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.runs/synth_1/.Xil/Vivado-36123-fpga-a3/realtime/FPMul_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.srcs/sources_1/imports/3D/ALU.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'BlockALU' (0#1) [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.srcs/sources_1/imports/3D/BlockALU.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'Heat3D' (0#1) [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.srcs/sources_1/imports/3D/Heat3D.v:4]
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[63] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[62] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[61] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[60] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[59] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[58] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[57] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[56] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[55] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[54] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[53] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[52] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[51] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[50] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[49] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[48] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[47] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[46] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[45] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[44] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[43] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[42] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[41] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[40] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[39] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[38] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[37] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[36] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[35] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[34] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[33] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[32] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[31] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[30] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[29] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[28] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[27] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[26] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[25] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[24] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[23] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[22] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[21] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[20] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[19] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[18] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[17] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[16] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[15] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[14] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[13] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[12] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[11] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[10] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[9] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[8] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[7] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[6] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[5] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[4] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[3] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[2] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[1] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[0] driven by constant 1
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[63] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[62] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[61] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[60] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[59] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[58] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[57] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[56] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[55] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[54] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[53] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[52] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[51] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[50] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[49] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[48] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[47] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[46] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[45] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[44] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[43] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[42] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[41] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[40] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[39] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[38] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[37] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[36] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[35] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[34] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[33] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[32] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[31] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[30] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[29] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[28] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[27] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[26] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[25] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[24] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[23] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[22] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[21] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[20] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[19] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[18] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[17] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[16] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[15] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[14] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[13] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[12] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[11] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[10] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[9] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[8] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[7] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[6] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[5] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[4] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[3] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[2] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[1] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[0] in module Heat3D is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3741.121 ; gain = 425.699 ; free physical = 37217 ; free virtual = 82939
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3758.934 ; gain = 443.512 ; free physical = 37216 ; free virtual = 82939
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3758.934 ; gain = 443.512 ; free physical = 37216 ; free virtual = 82939
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.2 ; elapsed = 00:00:00.2 . Memory (MB): peak = 3758.934 ; gain = 0.000 ; free physical = 37168 ; free virtual = 82890
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/BR1024FIFO512/BR1024FIFO512/BR1024FIFO512_in_context.xdc] for cell 'I_Queue/CenterQueue'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/BR1024FIFO512/BR1024FIFO512/BR1024FIFO512_in_context.xdc] for cell 'I_Queue/CenterQueue'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/BR1024FIFO512/BR1024FIFO512/BR1024FIFO512_in_context.xdc] for cell 'I_Queue/MidBackQueue'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/BR1024FIFO512/BR1024FIFO512/BR1024FIFO512_in_context.xdc] for cell 'I_Queue/MidBackQueue'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/BR1024FIFO512/BR1024FIFO512/BR1024FIFO512_in_context.xdc] for cell 'I_Queue/MidFrontQueue'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/BR1024FIFO512/BR1024FIFO512/BR1024FIFO512_in_context.xdc] for cell 'I_Queue/MidFrontQueue'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/BR1024FIFO512/BR1024FIFO512/BR1024FIFO512_in_context.xdc] for cell 'I_Queue/BottomQueue'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/BR1024FIFO512/BR1024FIFO512/BR1024FIFO512_in_context.xdc] for cell 'I_Queue/BottomQueue'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[0].I_ALU/MulKAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[0].I_ALU/MulKAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[0].I_ALU/MulKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[0].I_ALU/MulKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[0].I_ALU/MulKFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[0].I_ALU/MulKFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[0].I_ALU/MulZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[0].I_ALU/MulZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[1].I_ALU/MulKAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[1].I_ALU/MulKAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[1].I_ALU/MulKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[1].I_ALU/MulKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[1].I_ALU/MulKFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[1].I_ALU/MulKFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[1].I_ALU/MulZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[1].I_ALU/MulZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[2].I_ALU/MulKAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[2].I_ALU/MulKAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[2].I_ALU/MulKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[2].I_ALU/MulKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[2].I_ALU/MulKFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[2].I_ALU/MulKFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[2].I_ALU/MulZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[2].I_ALU/MulZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[3].I_ALU/MulKAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[3].I_ALU/MulKAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[3].I_ALU/MulKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[3].I_ALU/MulKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[3].I_ALU/MulKFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[3].I_ALU/MulKFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[3].I_ALU/MulZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[3].I_ALU/MulZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[4].I_ALU/MulKAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[4].I_ALU/MulKAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[4].I_ALU/MulKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[4].I_ALU/MulKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[4].I_ALU/MulKFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[4].I_ALU/MulKFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[4].I_ALU/MulZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[4].I_ALU/MulZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[5].I_ALU/MulKAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[5].I_ALU/MulKAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[5].I_ALU/MulKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[5].I_ALU/MulKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[5].I_ALU/MulKFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[5].I_ALU/MulKFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[5].I_ALU/MulZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[5].I_ALU/MulZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[6].I_ALU/MulKAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[6].I_ALU/MulKAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[6].I_ALU/MulKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[6].I_ALU/MulKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[6].I_ALU/MulKFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[6].I_ALU/MulKFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[6].I_ALU/MulZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[6].I_ALU/MulZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[7].I_ALU/MulKAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[7].I_ALU/MulKAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[7].I_ALU/MulKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[7].I_ALU/MulKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[7].I_ALU/MulKFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[7].I_ALU/MulKFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[7].I_ALU/MulZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[7].I_ALU/MulZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[8].I_ALU/MulKAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[8].I_ALU/MulKAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[8].I_ALU/MulKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[8].I_ALU/MulKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[8].I_ALU/MulKFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[8].I_ALU/MulKFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[8].I_ALU/MulZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[8].I_ALU/MulZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[9].I_ALU/MulKAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[9].I_ALU/MulKAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[9].I_ALU/MulKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[9].I_ALU/MulKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[9].I_ALU/MulKFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[9].I_ALU/MulKFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[9].I_ALU/MulZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[9].I_ALU/MulZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[10].I_ALU/MulKAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[10].I_ALU/MulKAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[10].I_ALU/MulKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[10].I_ALU/MulKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[10].I_ALU/MulKFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[10].I_ALU/MulKFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[10].I_ALU/MulZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[10].I_ALU/MulZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[11].I_ALU/MulKAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[11].I_ALU/MulKAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[11].I_ALU/MulKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[11].I_ALU/MulKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[11].I_ALU/MulKFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[11].I_ALU/MulKFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[11].I_ALU/MulZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[11].I_ALU/MulZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[12].I_ALU/MulKAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[12].I_ALU/MulKAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[12].I_ALU/MulKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[12].I_ALU/MulKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[12].I_ALU/MulKFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[12].I_ALU/MulKFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[12].I_ALU/MulZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[12].I_ALU/MulZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[13].I_ALU/MulKAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[13].I_ALU/MulKAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[13].I_ALU/MulKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[13].I_ALU/MulKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[13].I_ALU/MulKFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[13].I_ALU/MulKFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[13].I_ALU/MulZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[13].I_ALU/MulZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[14].I_ALU/MulKAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[14].I_ALU/MulKAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[14].I_ALU/MulKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[14].I_ALU/MulKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[14].I_ALU/MulKFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[14].I_ALU/MulKFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[14].I_ALU/MulZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[14].I_ALU/MulZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[15].I_ALU/MulKAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[15].I_ALU/MulKAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[15].I_ALU/MulKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[15].I_ALU/MulKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[15].I_ALU/MulKFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[15].I_ALU/MulKFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[15].I_ALU/MulZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPMul/FPMul/FPMul_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[15].I_ALU/MulZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[0].I_ALU/SumAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[0].I_ALU/SumAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[0].I_ALU/SumDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[0].I_ALU/SumDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[0].I_ALU/SumFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[0].I_ALU/SumFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[0].I_ALU/SumKACKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[0].I_ALU/SumKACKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[0].I_ALU/SumKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[0].I_ALU/SumKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[0].I_ALU/SumKACKDEKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[0].I_ALU/SumKACKDEKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[1].I_ALU/SumAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[1].I_ALU/SumAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[1].I_ALU/SumDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[1].I_ALU/SumDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[1].I_ALU/SumFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[1].I_ALU/SumFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[1].I_ALU/SumKACKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[1].I_ALU/SumKACKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[1].I_ALU/SumKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[1].I_ALU/SumKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[1].I_ALU/SumKACKDEKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[1].I_ALU/SumKACKDEKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[2].I_ALU/SumAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[2].I_ALU/SumAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[2].I_ALU/SumDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[2].I_ALU/SumDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[2].I_ALU/SumFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[2].I_ALU/SumFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[2].I_ALU/SumKACKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[2].I_ALU/SumKACKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[2].I_ALU/SumKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[2].I_ALU/SumKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[2].I_ALU/SumKACKDEKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[2].I_ALU/SumKACKDEKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[3].I_ALU/SumAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[3].I_ALU/SumAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[3].I_ALU/SumDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[3].I_ALU/SumDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[3].I_ALU/SumFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[3].I_ALU/SumFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[3].I_ALU/SumKACKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[3].I_ALU/SumKACKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[3].I_ALU/SumKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[3].I_ALU/SumKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[3].I_ALU/SumKACKDEKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[3].I_ALU/SumKACKDEKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[4].I_ALU/SumAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[4].I_ALU/SumAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[4].I_ALU/SumDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[4].I_ALU/SumDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[4].I_ALU/SumFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[4].I_ALU/SumFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[4].I_ALU/SumKACKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[4].I_ALU/SumKACKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[4].I_ALU/SumKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[4].I_ALU/SumKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[4].I_ALU/SumKACKDEKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[4].I_ALU/SumKACKDEKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[5].I_ALU/SumAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[5].I_ALU/SumAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[5].I_ALU/SumDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[5].I_ALU/SumDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[5].I_ALU/SumFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[5].I_ALU/SumFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[5].I_ALU/SumKACKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[5].I_ALU/SumKACKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[5].I_ALU/SumKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[5].I_ALU/SumKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[5].I_ALU/SumKACKDEKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[5].I_ALU/SumKACKDEKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[6].I_ALU/SumAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[6].I_ALU/SumAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[6].I_ALU/SumDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[6].I_ALU/SumDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[6].I_ALU/SumFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[6].I_ALU/SumFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[6].I_ALU/SumKACKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[6].I_ALU/SumKACKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[6].I_ALU/SumKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[6].I_ALU/SumKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[6].I_ALU/SumKACKDEKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[6].I_ALU/SumKACKDEKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[7].I_ALU/SumAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[7].I_ALU/SumAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[7].I_ALU/SumDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[7].I_ALU/SumDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[7].I_ALU/SumFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[7].I_ALU/SumFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[7].I_ALU/SumKACKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[7].I_ALU/SumKACKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[7].I_ALU/SumKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[7].I_ALU/SumKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[7].I_ALU/SumKACKDEKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[7].I_ALU/SumKACKDEKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[8].I_ALU/SumAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[8].I_ALU/SumAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[8].I_ALU/SumDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[8].I_ALU/SumDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[8].I_ALU/SumFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[8].I_ALU/SumFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[8].I_ALU/SumKACKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[8].I_ALU/SumKACKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[8].I_ALU/SumKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[8].I_ALU/SumKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[8].I_ALU/SumKACKDEKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[8].I_ALU/SumKACKDEKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[9].I_ALU/SumAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[9].I_ALU/SumAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[9].I_ALU/SumDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[9].I_ALU/SumDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[9].I_ALU/SumFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[9].I_ALU/SumFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[9].I_ALU/SumKACKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[9].I_ALU/SumKACKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[9].I_ALU/SumKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[9].I_ALU/SumKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[9].I_ALU/SumKACKDEKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[9].I_ALU/SumKACKDEKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[10].I_ALU/SumAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[10].I_ALU/SumAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[10].I_ALU/SumDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[10].I_ALU/SumDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[10].I_ALU/SumFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[10].I_ALU/SumFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[10].I_ALU/SumKACKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[10].I_ALU/SumKACKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[10].I_ALU/SumKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[10].I_ALU/SumKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[10].I_ALU/SumKACKDEKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[10].I_ALU/SumKACKDEKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[11].I_ALU/SumAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[11].I_ALU/SumAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[11].I_ALU/SumDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[11].I_ALU/SumDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[11].I_ALU/SumFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[11].I_ALU/SumFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[11].I_ALU/SumKACKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[11].I_ALU/SumKACKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[11].I_ALU/SumKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[11].I_ALU/SumKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[11].I_ALU/SumKACKDEKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[11].I_ALU/SumKACKDEKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[12].I_ALU/SumAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[12].I_ALU/SumAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[12].I_ALU/SumDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[12].I_ALU/SumDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[12].I_ALU/SumFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[12].I_ALU/SumFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[12].I_ALU/SumKACKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[12].I_ALU/SumKACKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[12].I_ALU/SumKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[12].I_ALU/SumKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[12].I_ALU/SumKACKDEKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[12].I_ALU/SumKACKDEKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[13].I_ALU/SumAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[13].I_ALU/SumAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[13].I_ALU/SumDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[13].I_ALU/SumDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[13].I_ALU/SumFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[13].I_ALU/SumFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[13].I_ALU/SumKACKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[13].I_ALU/SumKACKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[13].I_ALU/SumKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[13].I_ALU/SumKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[13].I_ALU/SumKACKDEKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[13].I_ALU/SumKACKDEKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[14].I_ALU/SumAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[14].I_ALU/SumAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[14].I_ALU/SumDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[14].I_ALU/SumDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[14].I_ALU/SumFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[14].I_ALU/SumFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[14].I_ALU/SumKACKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[14].I_ALU/SumKACKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[14].I_ALU/SumKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[14].I_ALU/SumKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[14].I_ALU/SumKACKDEKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[14].I_ALU/SumKACKDEKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[15].I_ALU/SumAC'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[15].I_ALU/SumAC'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[15].I_ALU/SumDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[15].I_ALU/SumDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[15].I_ALU/SumFG'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[15].I_ALU/SumFG'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[15].I_ALU/SumKACKDE'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[15].I_ALU/SumKACKDE'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[15].I_ALU/SumKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[15].I_ALU/SumKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[15].I_ALU/SumKACKDEKFGZB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/FPSum/FPSum/FPSum_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[15].I_ALU/SumKACKDEKFGZB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[0].I_ALU/HoldB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[0].I_ALU/HoldB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[1].I_ALU/HoldB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[1].I_ALU/HoldB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[2].I_ALU/HoldB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[2].I_ALU/HoldB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[3].I_ALU/HoldB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[3].I_ALU/HoldB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[4].I_ALU/HoldB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[4].I_ALU/HoldB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[5].I_ALU/HoldB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[5].I_ALU/HoldB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[6].I_ALU/HoldB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[6].I_ALU/HoldB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[7].I_ALU/HoldB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[7].I_ALU/HoldB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[8].I_ALU/HoldB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[8].I_ALU/HoldB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[9].I_ALU/HoldB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[9].I_ALU/HoldB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[10].I_ALU/HoldB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[10].I_ALU/HoldB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[11].I_ALU/HoldB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[11].I_ALU/HoldB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[12].I_ALU/HoldB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[12].I_ALU/HoldB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[13].I_ALU/HoldB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[13].I_ALU/HoldB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[14].I_ALU/HoldB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[14].I_ALU/HoldB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[15].I_ALU/HoldB'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat7/SR32Lat7/SR32Lat7_in_context.xdc] for cell 'I_BlockALU/gen_ALU_I[15].I_ALU/HoldB'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat3/SR32Lat3/SR32Lat3_in_context.xdc] for cell 'I_Queue/PadLeft'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.gen/sources_1/ip/SR32Lat3/SR32Lat3/SR32Lat3_in_context.xdc] for cell 'I_Queue/PadLeft'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3916.715 ; gain = 0.000 ; free physical = 37058 ; free virtual = 82780
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3916.715 ; gain = 0.000 ; free physical = 37059 ; free virtual = 82781
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3916.715 ; gain = 601.293 ; free physical = 37184 ; free virtual = 82907
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcu55c-fsvh2892-2L-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3916.715 ; gain = 601.293 ; free physical = 37184 ; free virtual = 82907
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for I_Queue/BottomQueue. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_Queue/CenterQueue. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_Queue/MidBackQueue. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_Queue/MidFrontQueue. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[0].I_ALU /MulKAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[1].I_ALU /MulKAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[2].I_ALU /MulKAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[3].I_ALU /MulKAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[4].I_ALU /MulKAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[5].I_ALU /MulKAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[6].I_ALU /MulKAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[7].I_ALU /MulKAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[8].I_ALU /MulKAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[9].I_ALU /MulKAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[10].I_ALU /MulKAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[11].I_ALU /MulKAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[12].I_ALU /MulKAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[13].I_ALU /MulKAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[14].I_ALU /MulKAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[15].I_ALU /MulKAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[0].I_ALU /MulKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[1].I_ALU /MulKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[2].I_ALU /MulKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[3].I_ALU /MulKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[4].I_ALU /MulKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[5].I_ALU /MulKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[6].I_ALU /MulKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[7].I_ALU /MulKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[8].I_ALU /MulKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[9].I_ALU /MulKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[10].I_ALU /MulKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[11].I_ALU /MulKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[12].I_ALU /MulKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[13].I_ALU /MulKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[14].I_ALU /MulKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[15].I_ALU /MulKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[0].I_ALU /MulKFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[1].I_ALU /MulKFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[2].I_ALU /MulKFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[3].I_ALU /MulKFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[4].I_ALU /MulKFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[5].I_ALU /MulKFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[6].I_ALU /MulKFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[7].I_ALU /MulKFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[8].I_ALU /MulKFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[9].I_ALU /MulKFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[10].I_ALU /MulKFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[11].I_ALU /MulKFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[12].I_ALU /MulKFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[13].I_ALU /MulKFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[14].I_ALU /MulKFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[15].I_ALU /MulKFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[0].I_ALU /MulZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[1].I_ALU /MulZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[2].I_ALU /MulZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[3].I_ALU /MulZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[4].I_ALU /MulZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[5].I_ALU /MulZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[6].I_ALU /MulZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[7].I_ALU /MulZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[8].I_ALU /MulZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[9].I_ALU /MulZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[10].I_ALU /MulZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[11].I_ALU /MulZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[12].I_ALU /MulZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[13].I_ALU /MulZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[14].I_ALU /MulZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[15].I_ALU /MulZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[0].I_ALU /SumAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[1].I_ALU /SumAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[2].I_ALU /SumAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[3].I_ALU /SumAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[4].I_ALU /SumAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[5].I_ALU /SumAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[6].I_ALU /SumAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[7].I_ALU /SumAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[8].I_ALU /SumAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[9].I_ALU /SumAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[10].I_ALU /SumAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[11].I_ALU /SumAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[12].I_ALU /SumAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[13].I_ALU /SumAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[14].I_ALU /SumAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[15].I_ALU /SumAC. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[0].I_ALU /SumDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[1].I_ALU /SumDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[2].I_ALU /SumDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[3].I_ALU /SumDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[4].I_ALU /SumDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[5].I_ALU /SumDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[6].I_ALU /SumDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[7].I_ALU /SumDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[8].I_ALU /SumDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[9].I_ALU /SumDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[10].I_ALU /SumDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[11].I_ALU /SumDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[12].I_ALU /SumDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[13].I_ALU /SumDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[14].I_ALU /SumDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[15].I_ALU /SumDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[0].I_ALU /SumFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[1].I_ALU /SumFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[2].I_ALU /SumFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[3].I_ALU /SumFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[4].I_ALU /SumFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[5].I_ALU /SumFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[6].I_ALU /SumFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[7].I_ALU /SumFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[8].I_ALU /SumFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[9].I_ALU /SumFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[10].I_ALU /SumFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[11].I_ALU /SumFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[12].I_ALU /SumFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[13].I_ALU /SumFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[14].I_ALU /SumFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[15].I_ALU /SumFG. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[0].I_ALU /SumKACKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[1].I_ALU /SumKACKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[2].I_ALU /SumKACKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[3].I_ALU /SumKACKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[4].I_ALU /SumKACKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[5].I_ALU /SumKACKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[6].I_ALU /SumKACKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[7].I_ALU /SumKACKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[8].I_ALU /SumKACKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[9].I_ALU /SumKACKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[10].I_ALU /SumKACKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[11].I_ALU /SumKACKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[12].I_ALU /SumKACKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[13].I_ALU /SumKACKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[14].I_ALU /SumKACKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[15].I_ALU /SumKACKDE. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[0].I_ALU /SumKACKDEKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[1].I_ALU /SumKACKDEKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[2].I_ALU /SumKACKDEKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[3].I_ALU /SumKACKDEKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[4].I_ALU /SumKACKDEKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[5].I_ALU /SumKACKDEKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[6].I_ALU /SumKACKDEKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[7].I_ALU /SumKACKDEKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[8].I_ALU /SumKACKDEKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[9].I_ALU /SumKACKDEKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[10].I_ALU /SumKACKDEKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[11].I_ALU /SumKACKDEKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[12].I_ALU /SumKACKDEKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[13].I_ALU /SumKACKDEKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[14].I_ALU /SumKACKDEKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[15].I_ALU /SumKACKDEKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[0].I_ALU /SumKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[1].I_ALU /SumKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[2].I_ALU /SumKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[3].I_ALU /SumKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[4].I_ALU /SumKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[5].I_ALU /SumKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[6].I_ALU /SumKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[7].I_ALU /SumKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[8].I_ALU /SumKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[9].I_ALU /SumKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[10].I_ALU /SumKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[11].I_ALU /SumKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[12].I_ALU /SumKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[13].I_ALU /SumKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[14].I_ALU /SumKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[15].I_ALU /SumKFGZB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[0].I_ALU /HoldB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[1].I_ALU /HoldB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[2].I_ALU /HoldB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[3].I_ALU /HoldB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[4].I_ALU /HoldB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[5].I_ALU /HoldB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[6].I_ALU /HoldB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[7].I_ALU /HoldB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[8].I_ALU /HoldB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[9].I_ALU /HoldB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[10].I_ALU /HoldB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[11].I_ALU /HoldB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[12].I_ALU /HoldB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[13].I_ALU /HoldB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[14].I_ALU /HoldB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_BlockALU/\gen_ALU_I[15].I_ALU /HoldB. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for I_Queue/PadLeft. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3916.715 ; gain = 601.293 ; free physical = 37178 ; free virtual = 82900
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'State_reg' in module 'Collector'
+INFO: [Synth 8-802] inferred FSM for state register 'State_reg' in module 'Queue'
+INFO: [Synth 8-802] inferred FSM for state register 'State_reg' in module 'Sink'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              StateReset |                             0001 |                              001
+       StateCollectRight |                             0010 |                              010
+        StateCollectLeft |                             0100 |                              100
+               StateIdle |                             1000 |                              000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'State_reg' using encoding 'one-hot' in module 'Collector'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              StateReset |                               00 |                              001
+       StateComputeInput |                               01 |                              010
+               StateIdle |                               10 |                              000
+              StateShift |                               11 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'State_reg' using encoding 'sequential' in module 'Queue'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              StateReset |                             0001 |                              001
+          StateSinkRight |                             0100 |                              010
+           StateSinkLeft |                             0010 |                              100
+               StateIdle |                             1000 |                              000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'State_reg' using encoding 'one-hot' in module 'Sink'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 3916.715 ; gain = 601.293 ; free physical = 37151 ; free virtual = 82876
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   16 Bit       Adders := 6     
++---Registers : 
+	             1088 Bit    Registers := 1     
+	             1024 Bit    Registers := 12    
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 6     
+	                1 Bit    Registers := 35    
++---Muxes : 
+	   4 Input 1088 Bit        Muxes := 1     
+	   4 Input 1024 Bit        Muxes := 12    
+	   2 Input 1024 Bit        Muxes := 5     
+	   2 Input  576 Bit        Muxes := 1     
+	   2 Input  512 Bit        Muxes := 4     
+	   2 Input   32 Bit        Muxes := 2     
+	   4 Input   32 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 2     
+	   4 Input   16 Bit        Muxes := 6     
+	   4 Input    4 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 54    
+	   3 Input    1 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 9024 (col length:94)
+BRAMs: 4032 (col length: RAMB18 288 RAMB36 144)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[63] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[62] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[61] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[60] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[59] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[58] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[57] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[56] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[55] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[54] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[53] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[52] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[51] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[50] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[49] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[48] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[47] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[46] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[45] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[44] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[43] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[42] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[41] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[40] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[39] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[38] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[37] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[36] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[35] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[34] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[33] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[32] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[31] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[30] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[29] driven by constant 1
+WARNING: [Synth 8-3917] design Heat3D has port M_AXIS_TKEEP[28] driven by constant 1
+INFO: [Common 17-14] Message 'Synth 8-3917' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[63] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[62] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[61] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[60] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[59] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[58] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[57] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[56] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[55] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[54] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[53] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[52] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[51] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[50] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[49] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[48] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[47] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[46] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[45] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[44] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[43] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[42] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[41] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[40] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[39] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[38] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[37] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[36] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[35] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[34] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[33] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[32] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[31] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[30] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[29] in module Heat3D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXIS_TKEEP[28] in module Heat3D is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 3916.715 ; gain = 601.293 ; free physical = 37122 ; free virtual = 82862
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 4202.652 ; gain = 887.230 ; free physical = 36615 ; free virtual = 82355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 4221.223 ; gain = 905.801 ; free physical = 36557 ; free virtual = 82297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 4249.262 ; gain = 933.840 ; free physical = 36462 ; free virtual = 82202
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 4252.230 ; gain = 936.809 ; free physical = 36450 ; free virtual = 82190
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:00:53 . Memory (MB): peak = 4252.230 ; gain = 936.809 ; free physical = 36448 ; free virtual = 82188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 4252.230 ; gain = 936.809 ; free physical = 36459 ; free virtual = 82199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 4252.230 ; gain = 936.809 ; free physical = 36459 ; free virtual = 82199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 4252.230 ; gain = 936.809 ; free physical = 36459 ; free virtual = 82199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 4252.230 ; gain = 936.809 ; free physical = 36459 ; free virtual = 82199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |FPSum         |        96|
+|2     |SR32Lat7      |        16|
+|3     |FPMul         |        64|
+|4     |BR1024FIFO512 |         4|
+|5     |SR32Lat3      |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+--------------+------+
+|      |Cell          |Count |
++------+--------------+------+
+|1     |BR1024FIFO512 |     4|
+|5     |FPMul         |    64|
+|69    |FPSum         |    96|
+|165   |SR32Lat3      |     1|
+|166   |SR32Lat7      |    16|
+|182   |BUFG          |     1|
+|183   |CARRY8        |     8|
+|184   |LUT1          |    10|
+|185   |LUT2          |    96|
+|186   |LUT3          |    22|
+|187   |LUT4          |  2683|
+|188   |LUT5          |    31|
+|189   |LUT6          |    60|
+|190   |FDRE          | 13551|
+|191   |FDSE          |     7|
+|192   |IBUF          |   517|
+|193   |OBUF          |   579|
++------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 4252.230 ; gain = 936.809 ; free physical = 36459 ; free virtual = 82199
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 129 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 4252.230 ; gain = 779.027 ; free physical = 36495 ; free virtual = 82235
+Synthesis Optimization Complete : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 4252.238 ; gain = 936.809 ; free physical = 36495 ; free virtual = 82235
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.18 . Memory (MB): peak = 4266.168 ; gain = 0.000 ; free physical = 36571 ; free virtual = 82311
+INFO: [Netlist 29-17] Analyzing 526 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4365.410 ; gain = 0.000 ; free physical = 36472 ; free virtual = 82213
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 518 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 517 instances
+
+Synth Design complete, checksum: 145586e6
+INFO: [Common 17-83] Releasing license: Synthesis
+54 Infos, 201 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:09 ; elapsed = 00:01:08 . Memory (MB): peak = 4365.410 ; gain = 1426.320 ; free physical = 36702 ; free virtual = 82442
+INFO: [Common 17-1381] The checkpoint '/home/pedro.rosso/stencil/stencil/Heat3D/Heat3D.runs/synth_1/Heat3D.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Heat3D_utilization_synth.rpt -pb Heat3D_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 24 11:26:13 2025...

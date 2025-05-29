@@ -1,0 +1,1 @@
+SR32Lat7.vhd,vhdl,xil_defaultlib,../../../../Heat1D.gen/sources_1/ip/SR32Lat7/sim/SR32Lat7.vhd,

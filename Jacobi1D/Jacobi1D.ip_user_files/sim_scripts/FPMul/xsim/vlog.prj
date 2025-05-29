@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../Jacobi1D.gen/sources_1/ip/FPMul/sim/FPMul.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

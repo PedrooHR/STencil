@@ -1,0 +1,2 @@
+BR1024FIFO512.v,verilog,xil_defaultlib,../../../../Jacobi3D.gen/sources_1/ip/BR1024FIFO512/sim/BR1024FIFO512.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

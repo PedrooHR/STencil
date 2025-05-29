@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../Jacobi2D.gen/sources_1/ip/SR32Lat15/sim/SR32Lat15.vhd" \
+
+nosort

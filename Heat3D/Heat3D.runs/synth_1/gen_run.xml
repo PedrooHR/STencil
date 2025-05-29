@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xcu55c-fsvh2892-2L-e" LaunchTime="1742826289" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/Heat3D.dcp">
+  <File Type="RDS-DCP" Name="Heat3D.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="Heat3D_utilization_synth.pb"/>
+  <File Type="PA-TCL" Name="Heat3D.tcl"/>
+  <File Type="RDS-UTIL" Name="Heat3D_utilization_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="Heat3D_reports.tcl"/>
+  <File Type="RDS-RDS" Name="Heat3D.vds"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/ip/BR1024FIFO512/BR1024FIFO512.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/ip/BR1024FIFO512/BR1024FIFO512.xci"/>
+        <Attr Name="ImportTime" Val="1736067874"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/3D/ALU.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../StencilSRC/Heat/3D/ALU.v"/>
+        <Attr Name="ImportTime" Val="1736066715"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/3D/BlockALU.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../StencilSRC/Heat/3D/BlockALU.v"/>
+        <Attr Name="ImportTime" Val="1736065904"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/3D/Collector.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../StencilSRC/Heat/3D/Collector.v"/>
+        <Attr Name="ImportTime" Val="1736064280"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/3D/Queue.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../StencilSRC/Heat/3D/Queue.v"/>
+        <Attr Name="ImportTime" Val="1736064280"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/3D/Sink.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../StencilSRC/Heat/3D/Sink.v"/>
+        <Attr Name="ImportTime" Val="1736064281"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/3D/Heat3D.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../StencilSRC/Heat/3D/Heat3D.v"/>
+        <Attr Name="ImportTime" Val="1736065908"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/component.xml">
+      <FileInfo SFType="IPXACT"/>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Heat3D"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/Heat3D.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="FPMul"/>
+  <BlockFileSet Type="BlockSrcs" Name="FPSum"/>
+  <BlockFileSet Type="BlockSrcs" Name="SR32Lat7"/>
+  <BlockFileSet Type="BlockSrcs" Name="SR32Lat3"/>
+</GenRun>

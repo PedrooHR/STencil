@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../Heat3D.gen/sources_1/ip/SR32Lat7/sim/SR32Lat7.vhd" \
+
+nosort

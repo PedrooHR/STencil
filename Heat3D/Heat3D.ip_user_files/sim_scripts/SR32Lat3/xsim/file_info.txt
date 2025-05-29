@@ -1,0 +1,2 @@
+SR32Lat3.vhd,vhdl,xil_defaultlib,../../../../Heat3D.gen/sources_1/ip/SR32Lat3/sim/SR32Lat3.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v

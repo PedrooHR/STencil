@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../Heat3D.gen/sources_1/ip/BR1024FIFO512/sim/BR1024FIFO512.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

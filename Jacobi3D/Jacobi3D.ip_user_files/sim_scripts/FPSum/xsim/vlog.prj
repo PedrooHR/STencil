@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../Jacobi3D.gen/sources_1/ip/FPSum/sim/FPSum.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

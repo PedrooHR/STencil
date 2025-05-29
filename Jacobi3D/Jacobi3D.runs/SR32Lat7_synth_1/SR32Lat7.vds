@@ -1,0 +1,249 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Tue Dec 31 23:19:37 2024
+# Process ID: 9269
+# Current directory: /home/pedro.rosso/stencil/stencil/Jacobi3D/Jacobi3D.runs/SR32Lat7_synth_1
+# Command line: vivado -log SR32Lat7.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source SR32Lat7.tcl
+# Log file: /home/pedro.rosso/stencil/stencil/Jacobi3D/Jacobi3D.runs/SR32Lat7_synth_1/SR32Lat7.vds
+# Journal file: /home/pedro.rosso/stencil/stencil/Jacobi3D/Jacobi3D.runs/SR32Lat7_synth_1/vivado.jou
+# Running On: fpga-a3, OS: Linux, CPU Frequency: 1634.387 MHz, CPU Physical cores: 20, Host memory: 134833 MB
+#-----------------------------------------------------------
+source SR32Lat7.tcl -notrace
+Command: synth_design -top SR32Lat7 -part xcu55c-fsvh2892-2L-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcu55c'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcu55c'
+INFO: [Device 21-403] Loading part xcu55c-fsvh2892-2L-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 9418
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3651.180 ; gain = 334.793 ; free physical = 53039 ; free virtual = 94677
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'SR32Lat7' [/home/pedro.rosso/stencil/stencil/Jacobi3D/Jacobi3D.srcs/sources_1/ip/SR32Lat7/synth/SR32Lat7.vhd:68]
+	Parameter C_XDEVICEFAMILY bound to: virtexuplusHBM - type: string 
+	Parameter C_VERBOSITY bound to: 0 - type: integer 
+	Parameter C_WIDTH bound to: 32 - type: integer 
+	Parameter C_DEPTH bound to: 7 - type: integer 
+	Parameter C_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_SHIFT_TYPE bound to: 0 - type: integer 
+	Parameter C_OPT_GOAL bound to: 0 - type: integer 
+	Parameter C_AINIT_VAL bound to: 00000000000000000000000000000000 - type: string 
+	Parameter C_SINIT_VAL bound to: 00000000000000000000000000000000 - type: string 
+	Parameter C_DEFAULT_DATA bound to: 00000000000000000000000000000000 - type: string 
+	Parameter C_HAS_A bound to: 0 - type: integer 
+	Parameter C_HAS_CE bound to: 1 - type: integer 
+	Parameter C_REG_LAST_BIT bound to: 1 - type: integer 
+	Parameter C_SYNC_PRIORITY bound to: 1 - type: integer 
+	Parameter C_SYNC_ENABLE bound to: 0 - type: integer 
+	Parameter C_HAS_SCLR bound to: 0 - type: integer 
+	Parameter C_HAS_SSET bound to: 0 - type: integer 
+	Parameter C_HAS_SINIT bound to: 0 - type: integer 
+	Parameter C_MEM_INIT_FILE bound to: no_coe_file_loaded - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_READ_MIF bound to: 0 - type: integer 
+	Parameter C_PARSER_TYPE bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'c_shift_ram_v12_0_14' declared at '/home/pedro.rosso/stencil/stencil/Jacobi3D/Jacobi3D.srcs/sources_1/ip/SR32Lat7/hdl/c_shift_ram_v12_0_vh_rfs.vhd:2590' bound to instance 'U0' of component 'c_shift_ram_v12_0_14' [/home/pedro.rosso/stencil/stencil/Jacobi3D/Jacobi3D.srcs/sources_1/ip/SR32Lat7/synth/SR32Lat7.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'SR32Lat7' (0#1) [/home/pedro.rosso/stencil/stencil/Jacobi3D/Jacobi3D.srcs/sources_1/ip/SR32Lat7/synth/SR32Lat7.vhd:68]
+WARNING: [Synth 8-7129] Port a[3] in module c_shift_ram_v12_0_14_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[2] in module c_shift_ram_v12_0_14_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[1] in module c_shift_ram_v12_0_14_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[0] in module c_shift_ram_v12_0_14_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclr in module c_shift_ram_v12_0_14_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aset in module c_shift_ram_v12_0_14_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ainit in module c_shift_ram_v12_0_14_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sclr in module c_shift_ram_v12_0_14_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sset in module c_shift_ram_v12_0_14_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sinit in module c_shift_ram_v12_0_14_legacy is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3722.148 ; gain = 405.762 ; free physical = 54134 ; free virtual = 95773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 3739.961 ; gain = 423.574 ; free physical = 54134 ; free virtual = 95773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 3739.961 ; gain = 423.574 ; free physical = 54134 ; free virtual = 95773
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3739.961 ; gain = 0.000 ; free physical = 54127 ; free virtual = 95767
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Jacobi3D/Jacobi3D.srcs/sources_1/ip/SR32Lat7/SR32Lat7_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Jacobi3D/Jacobi3D.srcs/sources_1/ip/SR32Lat7/SR32Lat7_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/pedro.rosso/stencil/stencil/Jacobi3D/Jacobi3D.runs/SR32Lat7_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/pedro.rosso/stencil/stencil/Jacobi3D/Jacobi3D.runs/SR32Lat7_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3918.555 ; gain = 0.000 ; free physical = 54010 ; free virtual = 95649
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3918.555 ; gain = 0.000 ; free physical = 54010 ; free virtual = 95649
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 3918.555 ; gain = 602.168 ; free physical = 54100 ; free virtual = 95740
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcu55c-fsvh2892-2L-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 3918.555 ; gain = 602.168 ; free physical = 54100 ; free virtual = 95740
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  /home/pedro.rosso/stencil/stencil/Jacobi3D/Jacobi3D.runs/SR32Lat7_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 3918.555 ; gain = 602.168 ; free physical = 54100 ; free virtual = 95740
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3918.555 ; gain = 602.168 ; free physical = 54100 ; free virtual = 95740
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 9024 (col length:94)
+BRAMs: 4032 (col length: RAMB18 288 RAMB36 144)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port a[3] in module c_shift_ram_v12_0_14_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[2] in module c_shift_ram_v12_0_14_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[1] in module c_shift_ram_v12_0_14_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[0] in module c_shift_ram_v12_0_14_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclr in module c_shift_ram_v12_0_14_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aset in module c_shift_ram_v12_0_14_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ainit in module c_shift_ram_v12_0_14_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sclr in module c_shift_ram_v12_0_14_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sset in module c_shift_ram_v12_0_14_legacy is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sinit in module c_shift_ram_v12_0_14_legacy is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 3918.555 ; gain = 602.168 ; free physical = 54083 ; free virtual = 95727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 4135.016 ; gain = 818.629 ; free physical = 53591 ; free virtual = 95235
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 4135.016 ; gain = 818.629 ; free physical = 53591 ; free virtual = 95235
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 4154.047 ; gain = 837.660 ; free physical = 53590 ; free virtual = 95234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 4159.984 ; gain = 843.598 ; free physical = 53580 ; free virtual = 95224
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 4159.984 ; gain = 843.598 ; free physical = 53580 ; free virtual = 95224
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 4159.984 ; gain = 843.598 ; free physical = 53580 ; free virtual = 95224
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 4159.984 ; gain = 843.598 ; free physical = 53580 ; free virtual = 95224
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 4159.984 ; gain = 843.598 ; free physical = 53581 ; free virtual = 95225
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 4159.984 ; gain = 843.598 ; free physical = 53581 ; free virtual = 95225
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |SRL16E |    32|
+|2     |FDRE   |    64|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 4159.984 ; gain = 843.598 ; free physical = 53581 ; free virtual = 95225
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 4159.984 ; gain = 665.004 ; free physical = 53613 ; free virtual = 95257
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 4159.992 ; gain = 843.598 ; free physical = 53613 ; free virtual = 95257
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4167.922 ; gain = 0.000 ; free physical = 53719 ; free virtual = 95363
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4234.133 ; gain = 0.000 ; free physical = 53597 ; free virtual = 95241
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: e3fbbf46
+INFO: [Common 17-83] Releasing license: Synthesis
+17 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:00:47 . Memory (MB): peak = 4234.133 ; gain = 1295.047 ; free physical = 53801 ; free virtual = 95445
+INFO: [Common 17-1381] The checkpoint '/home/pedro.rosso/stencil/stencil/Jacobi3D/Jacobi3D.runs/SR32Lat7_synth_1/SR32Lat7.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP SR32Lat7, cache-ID = 7593d315106683eb
+INFO: [Coretcl 2-1174] Renamed 3 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/pedro.rosso/stencil/stencil/Jacobi3D/Jacobi3D.runs/SR32Lat7_synth_1/SR32Lat7.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file SR32Lat7_utilization_synth.rpt -pb SR32Lat7_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 31 23:20:38 2024...
